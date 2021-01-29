@@ -1,0 +1,10 @@
+---
+- name: demo ansible
+  hosts: switch
+  
+  tasks:
+    - name: run show ip interfaces brief
+      ios_command:
+      commands: show ip int b
+    register: demo
+    - debug: var-demo.stdout_lines
