@@ -1,10 +1,10 @@
 ---
-- name: demo ansible
+- name: Create vlan
   hosts: con-sw-tra-xanh
   
   tasks:
-    - name: run show ip interfaces brief
-      ios_command:
-        commands: show ip int b
-      register: demo
-    - debug: var=demo.stdout_lines
+    - name: Create vlan
+      ios_vlan:
+        vlan_id: 100
+        name: test-vlan
+        state: present
