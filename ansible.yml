@@ -1,6 +1,6 @@
 ---
 - name: demo ansible
-  hosts: switch
+  hosts: con-sw-tra-xanh
   
   tasks:
     - name: run show ip interfaces brief
