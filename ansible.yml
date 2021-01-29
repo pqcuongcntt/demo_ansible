@@ -3,8 +3,7 @@
   hosts: con-sw-tra-xanh
   
   tasks:
-    - name: Create vlan
-      ios_vlan:
-        vlan_id: 100
-        name: test-vlan
-        state: present
+   - name: Set GigabitEthernet0/3 IPv4 address
+     ios_l3_interface:
+       name: GigabitEthernet0/3
+       ipv4: 192.168.0.1/24
